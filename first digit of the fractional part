@@ -1,0 +1,23 @@
+def first_digit_fractional_part(number):
+    
+    num_str = str(number)
+    
+    
+    if '.' in num_str:
+        integer_part, fractional_part = num_str.split('.')
+    else:
+     
+        return 0
+    
+  
+    if len(fractional_part) > 0:
+        first_digit = fractional_part[0]
+        return int(first_digit)
+    else:
+     
+        return 0
+
+# Example usage
+number = 12.347
+result = first_digit_fractional_part(number)
+print(f"First digit of the fractional part of {number} is: {result}")
