@@ -1,0 +1,10 @@
+def compound_interest(principal, rate, time):
+ 
+    # Calculates compound interest
+    Amount = principal * (pow((1 + rate / 100), time))
+    CI = Amount - principal
+    print("Compound interest is", CI)
+ 
+ 
+
+compound_interest(100, 10, 5)
