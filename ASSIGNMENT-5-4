@@ -1,0 +1,14 @@
+X = int(input("Enter the value for X: "))
+
+
+if X == 6:
+    Y = X + 10
+elif X == 7:
+    Y = X * X
+elif X == 12:
+    Y = 2 * X + 4
+else:
+    Y = X * 6 - 1
+
+# Print the result
+print("The value of Y is:", Y)
