@@ -1,0 +1,22 @@
+def swap_last_third_last_digits(number):
+    
+    num_str = str(number)
+    
+    
+    if len(num_str) < 3:
+        return "Number must have at least three digits."
+    
+    
+    swapped_num_str = (
+        num_str[:-3] + num_str[-1] + num_str[-2] + num_str[-3] + num_str[-2] + num_str[-1:]
+    )
+    
+   
+    swapped_num = int(swapped_num_str)
+    
+    return swapped_num
+
+# Example usage
+number = 23617
+result = swap_last_third_last_digits(number)
+print(f"Original number: {number}, After swapping: {result}")
