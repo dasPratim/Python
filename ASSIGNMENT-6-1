@@ -1,0 +1,30 @@
+import numpy as np
+
+def find_intersection(a, b, c, p, q, r):
+    
+    A = np.array([[a, b],
+                  [p, q]])
+   
+    B = np.array([-c, -r])
+    
+    
+    try:
+        intersection = np.linalg.solve(A, B)
+        return intersection
+    except np.linalg.LinAlgError:
+        return "Lines are parallel or coincident and do not intersect"
+
+def main():
+   
+    a, b, c, p, q, r = map(float, input("Enter values for a, b, c, p, q, r: ").split())
+    
+   
+    intersection = find_intersection(a, b, c, p, q, r)
+    
+    if isinstance(intersection, str):
+        print(intersection)
+    else:
+        print(f"Point of intersection: ({intersection[0]:.2f}, {intersection[1]:.2f})")
+
+if __name__ == "__main__":
+    main()
