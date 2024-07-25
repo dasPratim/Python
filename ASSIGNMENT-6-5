@@ -1,0 +1,22 @@
+def calculate_slope(a, b):
+    if b == 0:
+        return None 
+    else:
+        return -a / b
+
+def main():
+   
+    a = float(input("Enter coefficient a: "))
+    b = float(input("Enter coefficient b: "))
+    c = float(input("Enter coefficient c: "))
+    
+    
+    slope = calculate_slope(a, b)
+    
+    if slope is None:
+        print("The line is vertical.")
+    else:
+        print(f"The slope of the line is: {slope:.2f}")
+
+if __name__ == "__main__":
+    main()
