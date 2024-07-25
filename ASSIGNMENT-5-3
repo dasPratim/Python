@@ -1,0 +1,20 @@
+marks = float(input("Enter the marks of the student: "))
+
+
+if marks > 90:
+    grade = 'E'
+elif 80 <= marks <= 89:
+    grade = 'A'
+elif 70 <= marks <= 79:
+    grade = 'B'
+elif 60 <= marks <= 69:
+    grade = 'C'
+elif 50 <= marks <= 59:
+    grade = 'D'
+elif 35 <= marks <= 49:
+    grade = 'P'
+else:
+    grade = 'F'
+
+# Print the grade
+print("The student's grade is:", grade)
