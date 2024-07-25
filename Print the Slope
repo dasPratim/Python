@@ -1,0 +1,9 @@
+a = float(input("Enter a: "))
+b = float(input("Enter b: "))
+c = float(input("Enter c: "))
+
+
+slope = -a / b
+
+ 
+print(f"The slope of the line is: {slope}")
