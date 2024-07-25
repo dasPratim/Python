@@ -1,0 +1,23 @@
+def insert_one_before_decimal(number):
+   
+    num_str = str(number)
+    
+    
+    if '.' in num_str:
+        decimal_index = num_str.index('.')
+    else:
+       
+        return float(num_str + '.1')
+    
+    
+    new_num_str = num_str[:decimal_index] + '1' + num_str[decimal_index:]
+    
+    
+    new_number = float(new_num_str)
+    
+    return new_number
+
+# Example usage
+number = 12.34
+result = insert_one_before_decimal(number)
+print(f"Original number: {number}, After inserting 1 before decimal: {result}")
