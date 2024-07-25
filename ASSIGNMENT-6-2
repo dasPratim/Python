@@ -1,0 +1,27 @@
+import math
+
+def calculate_angle(a, b, c):
+    cos_A = (b**2 + c**2 - a**2) / (2 * b * c)
+    
+    
+    cos_A = max(-1, min(1, cos_A))
+    
+   
+    angle_A_rad = math.acos(cos_A)
+    angle_A_deg = math.degrees(angle_A_rad)
+    
+    return angle_A_deg
+
+def main():
+    
+    a = float(input("Enter side a: "))
+    b = float(input("Enter side b: "))
+    c = float(input("Enter side c: "))
+    
+  
+    angle_A = calculate_angle(a, b, c)
+    
+    print(f"Angle A: {angle_A:.2f} degrees")
+
+if __name__ == "__main__":
+    main()
