@@ -1,0 +1,26 @@
+def insert_one_after_decimal(number):
+    
+    num_str = str(number)
+    
+   
+    if '.' in num_str:
+        integer_part, fractional_part = num_str.split('.')
+    else:
+        
+        return number
+    
+    
+    new_fractional_part = '1' + fractional_part
+    
+    
+    new_num_str = integer_part + '.' + new_fractional_part
+    
+   
+    new_number = float(new_num_str)
+    
+    return new_number
+
+# Example usage
+number = 12.34
+result = insert_one_after_decimal(number)
+print(f"Original number: {number}, After inserting 1 after decimal: {result}")
