@@ -1,0 +1,22 @@
+X = int(input("Enter the value for X (0, 1, 2, or 3): "))
+Y = int(input("Enter the value for Y: "))
+Z = int(input("Enter the value for Z: "))
+
+
+if X == 0:
+    result = Y + Z
+elif X == 1:
+    result = Y - Z
+elif X == 2:
+    result = Y * Z
+elif X == 3:
+    
+    if Z != 0:
+        result = Y / Z
+    else:
+        result = "Error: Division by zero"
+else:
+    result = "Invalid input for X"
+
+# Print the result
+print("The result is:", result)
