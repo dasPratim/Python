@@ -1,0 +1,27 @@
+import math
+
+def calculate_distance(a, b, c, d, e):
+    
+    numerator = abs(c * a + d * b + e)
+    denominator = math.sqrt(c**2 + d**2)
+    
+    
+    distance = numerator / denominator
+    
+    return distance
+
+def main():
+   
+    a = float(input("Enter the x-coordinate of the point (a): "))
+    b = float(input("Enter the y-coordinate of the point (b): "))
+    c = float(input("Enter the coefficient c of the line equation: "))
+    d = float(input("Enter the coefficient d of the line equation: "))
+    e = float(input("Enter the constant e of the line equation: "))
+    
+    
+    distance = calculate_distance(a, b, c, d, e)
+    
+    print(f"The distance from the point ({a}, {b}) to the line {c}x + {d}y + {e} = 0 is: {distance:.2f}")
+
+if __name__ == "__main__":
+    main()
