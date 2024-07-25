@@ -1,0 +1,24 @@
+def double_second_last_digit(number):
+    
+    num_str = str(number)
+    
+   
+    if len(num_str) < 2:
+        return "Number must have at least two digits."
+    
+    
+    second_last_digit = int(num_str[-2])
+    doubled_digit = second_last_digit * 2
+    
+    
+    new_num_str = num_str[:-2] + str(doubled_digit) + num_str[-1]
+    
+   
+    new_number = int(new_num_str)
+    
+    return new_number
+
+# Example usage
+number = 234
+result = double_second_last_digit(number)
+print(f"Original number: {number}, After doubling second last digit: {result}")
