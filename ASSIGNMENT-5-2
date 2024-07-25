@@ -1,0 +1,20 @@
+a = float(input("Enter the length of side a: "))
+b = float(input("Enter the length of side b: "))
+c = float(input("Enter the length of side c: "))
+
+
+hypotenuse = max(a, b, c)
+
+
+if hypotenuse == a:
+    other_side1, other_side2 = b, c
+elif hypotenuse == b:
+    other_side1, other_side2 = a, c
+else:
+    other_side1, other_side2 = a, b
+
+
+if hypotenuse**2 == other_side1**2 + other_side2**2:
+    print("Angle A is 90 degrees.")
+else:
+    print("Angle A is not 90 degrees.")
