@@ -1,0 +1,24 @@
+import math
+
+
+def calculate_mean(scores):
+    return sum(scores) / len(scores)
+
+
+def calculate_std_deviation(scores, mean):
+    variance = sum((x - mean) ** 2 for x in scores) / len(scores)
+    return math.sqrt(variance)
+
+
+scores_input = input("Enter the scores separated by spaces: ")
+
+
+scores = list(map(int, scores_input.split()))
+
+
+mean = calculate_mean(scores)
+std_deviation = calculate_std_deviation(scores, mean)
+
+# Print the results
+print(f"The mean of the scores is: {mean:.2f}")
+print(f"The standard deviation of the scores is: {std_deviation:.2f}")
