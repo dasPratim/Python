@@ -1,0 +1,17 @@
+numbers = input("Enter three numbers separated by commas: ")
+
+
+numbers_list = numbers.split(',')
+
+
+num1 = int(numbers_list[0].strip())
+num2 = int(numbers_list[1].strip())
+num3 = int(numbers_list[2].strip())
+
+
+largest = max(num1, num2, num3)
+smallest = min(num1, num2, num3)
+
+# Print the results
+print(f"The largest number is: {largest}")
+print(f"The smallest number is: {smallest}")
